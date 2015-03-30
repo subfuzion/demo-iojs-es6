@@ -1,0 +1,14 @@
+{
+  "name": "let-demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha --harmony"
+  },
+  "author": "Tony Pujals (http://twitter.com/subfuzion)",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.1"
+  }
+}
