@@ -5,3 +5,4 @@ rm /usr/bin/node
 rm /usr/bin/npm
 ln -s /workspace/iojs-v1.6.2-linux-x64/bin/node /usr/bin/node
 ln -s /workspace/iojs-v1.6.2-linux-x64/bin/npm /usr/bin/npm
+ln -s /workspace/iojs-v1.6.2-linux-x64/bin/iojs /usr/bin/iojs
