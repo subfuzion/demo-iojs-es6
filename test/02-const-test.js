@@ -1,7 +1,7 @@
 "use strict";
-var assert = require('assert');
+const assert = require('assert');
 
-describe ('const examples', function() {
+describe ('const', function() {
 
   it ('can\'t redeclare a const', function() {
 
@@ -28,7 +28,7 @@ describe ('const examples', function() {
 
   });
 
-  it ('const object properties aren\'t protected', function() {
+  it ('remember, const object properties aren\'t protected', function() {
 
     const o = { name: 'silly' };
 

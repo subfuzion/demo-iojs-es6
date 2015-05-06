@@ -1,8 +1,8 @@
 "use strict";
-var assert = require('assert');
+const assert = require('assert');
 
-describe('function in block examples', function () {
-  it ('this always worked', function() {
+describe('function-in-blocks', function () {
+  it ('this always worked (function in function)', function() {
 
     function greet() {
 
@@ -23,7 +23,7 @@ describe('function in block examples', function () {
 
   });
 
-  it ('greet function declared in two different scopes', function() {
+  it ('greet function declared in two different scopes (function in block)', function() {
 
     function greet() {
       return 'woof';

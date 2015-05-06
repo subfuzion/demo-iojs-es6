@@ -1,15 +1,23 @@
 "use strict"
-var assert = require('assert'),
-    util = require('util');
+const assert = require('assert');
+const util = require('util');
 
-describe ('class examples', function() {
+describe ('class', function() {
 
   class Animal {
 
     constructor(name, noise) {
-      this.name = name;
+      this._name = name;
       this.noise = noise;
       Animal.incrementCount();
+    }
+
+    set name(name) {
+      this._name = name;
+    }
+
+    get name() {
+      return this._name;
     }
 
     makeNoise() {
@@ -17,6 +25,8 @@ describe ('class examples', function() {
     }
 
     static incrementCount() {
+      // this is the prototype for Animal, so count is
+      // shared for all instances
       if (!this.count) this.count = 0;
       this.count++;
     }

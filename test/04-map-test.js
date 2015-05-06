@@ -1,7 +1,7 @@
 "use strict"
-var assert = require('assert');
+const assert = require('assert');
 
-describe ('map examples', function() {
+describe ('map', function() {
 
   it ('maps can use types other than strings for keys', function() {
 

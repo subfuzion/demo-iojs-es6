@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "mocha --harmony"
+    "test": "mocha --harmony",
+    "test-let": "mocha --grep let",
+    "test-const": "mocha --grep const",
+    "test-function-in-blocks": "mocha --grep function-in-blocks",
+    "test-map": "mocha --grep map",
+    "test-set": "mocha --grep set",
+    "test-generator": "mocha --grep generator",
+    "test-promise": "mocha --grep promise -- --harmony_arrow_functions",
+    "test-class": "mocha --grep class"
   },
   "author": "Tony Pujals (http://twitter.com/subfuzion)",
   "license": "ISC",

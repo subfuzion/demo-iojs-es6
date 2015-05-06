@@ -1,7 +1,7 @@
 "use strict"
-var assert = require('assert');
+const assert = require('assert');
 
-describe ('set examples', function() {
+describe ('set', function() {
 
   it ('sets can store any type including NaN', function() {
 
