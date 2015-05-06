@@ -50,7 +50,7 @@ nvm install iojs
 * No runtime flag required
 * But make sure to add `"use strict"` to top of module
 
-### See test examples here:
+### The rest of this presentation goes with the test code here:
 [https://github.com/tonypujals/demo-iojs-es6/](https://github.com/tonypujals/demo-iojs-es6/)
 
 ---
