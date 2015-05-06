@@ -219,7 +219,7 @@ Wrap function in another function that returns a Promise
 ---
 
 ```js
-function promiseFunc(timeout) {
+function promiseFunc(arg) {
 
    return new Promise(function (resolve, reject) {
 
