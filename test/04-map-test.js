@@ -150,7 +150,7 @@ describe ('map iteration examples', function() {
     assert( map.delete(0) );
 
     // only 1 entry left
-    assert(map.size, 1);
+    assert.equal(map.size, 1);
 
     map.clear();
     assert.equal(map.size, 0);

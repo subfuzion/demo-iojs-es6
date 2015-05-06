@@ -6,9 +6,9 @@ describe('generator', function() {
   it ('should generate consecutive numbers from 0-2', function() {
 
     function* numgenerator() {
-      yield 0;
-      yield 1;
-      yield 2;
+      for (let i = 0; i < 3; i++) {
+        yield i;
+      }
     }
 
     let g = numgenerator();
@@ -28,7 +28,7 @@ describe('generator', function() {
 
     function* errorGenerator() {
       yield 1;
-      throw new Error('')
+      throw new Error();
     }
 
     let g = errorGenerator();

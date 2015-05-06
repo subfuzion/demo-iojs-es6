@@ -274,7 +274,13 @@ promiseFunc(arg)
 
 ### Classes
 
-[https://github.com/lukehoban/es6features#classes](https://github.com/lukehoban/es6features#classes)
+* syntactic sugar over prototype-based OOP model
+  * inheritance
+  * constructor
+  * super
+  * static
+  * get / set methods
+
 
 ---
 
