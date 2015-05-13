@@ -18,5 +18,8 @@
   "devDependencies": {
     "chai": "^2.2.0",
     "mocha": "^2.2.1"
+  },
+  "engines": {
+  	"iojs": "^2.0.0"
   }
 }
