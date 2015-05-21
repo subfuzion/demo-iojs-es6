@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "mocha -- --harmony_arrow_functions",
     "test": "mocha -- --harmony_arrow_functions",
     "test-let": "mocha --grep let",
     "test-const": "mocha --grep const",
