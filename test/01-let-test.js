@@ -5,7 +5,7 @@ const assert = require('assert');
 
 describe('let', function() {
 
-  describe('var hoisting examples for reference', function () {
+  describe('var hoisting and redeclaration examples for comparison to let', function () {
 
     // http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/
     // http://code.tutsplus.com/tutorials/javascript-hoisting-explained--net-15092
@@ -19,8 +19,15 @@ describe('let', function() {
     });
 
     it('should demonstrate var declaration hoisting', function () {
-      // no error is thrown since b is declared in the function
-      // (it's declaration is effectively "hoisted" to the top of the function);
+      // no error is thrown since b is declared in the function...
+      // ...it's declaration is effectively "hoisted" to the top of the function
+      // With hoisting, it's as if the code looked like this:
+      //   var a;
+      //   var b;
+      //
+      //   a = b;  // a is undefined since b is undefined
+      //   b = 'hello';
+
 
       var a = b;
       var b = 'hello';

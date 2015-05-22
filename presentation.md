@@ -5,7 +5,7 @@
 
 ---
 
-## io.js 2.0 released today!
+## io.js 2.0.2
 
 ---
 
@@ -65,6 +65,7 @@ Get used to it. Use it instead of var.
 
 * declares a block scope local variable
 * optionally initialized to a value
+* eliminates weirdness due to var hoisting
 
 ```js
 let var1 = value1;
@@ -125,7 +126,7 @@ it ('greet function declared in two different scopes (function in block)', funct
 
 ## Map
 
-* simple key/value map
+* simple key/value map, iterates in order entries were added
 * keys can be any object, not just string
 * advantages of map over object
   * object has a prototype with default keys
@@ -133,6 +134,92 @@ it ('greet function declared in two different scopes (function in block)', funct
   * can easily get the size of a map
 
 #### [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+---
+
+### Common Functions
+
+* get(key) / set(key, value)
+* has(key)
+* keys(), values()
+* delete(key), clear()
+
+### Common Properties
+
+* size
+
+---
+
+### Iteration
+
+```js
+let map = new Map();
+```
+
+* by values
+
+```js
+      map.forEach(function(value) {
+        ...  
+      });
+```
+* by key-value pairs
+
+```js
+      for (let pair of map) {
+        // pair is an array [ key, value ]
+      }
+```
+
+---
+
+### map iteration continued
+
+* by a pair iterator
+
+```js
+      let entries = map.entries();
+      let entry = entries.next();
+      // entry.done
+      // entry.value[0] => key
+      // entry.value[1] => value
+
+```
+
+---
+
+### map iteration continued
+
+```js
+  let keys = map.keys();
+  let next = keys.next();
+  // next.value
+  // next.done
+```
+or using `for-of` loop
+
+```js
+  for (let key of map.keys()) {
+  }
+```
+
+---
+
+### map iteration continued
+
+```js
+  let values = map.values();
+  let next = values.next();
+  // next.value
+  // next.done
+```
+
+or using `for-of` loop
+
+```js
+  for (let value of map.values()) {
+  }
+```
 
 ---
 
@@ -157,6 +244,19 @@ A collection of unique values of any type.
 * iterates in insertion order
 
 #### [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+---
+
+### Common Functions
+
+* add(value)
+* has(key)
+* values(), keys()
+* delete(key), clear()
+
+### Common Properties
+
+* size
 
 ---
 

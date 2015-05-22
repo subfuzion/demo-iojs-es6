@@ -24,6 +24,19 @@ describe ('map', function() {
 
   });
 
+  it ('two object references', function() {
+
+    let a = {};
+    let b = {};
+    let map = new Map();
+
+    map.set(a, 'obj1');
+    map.set(b, 'obj2');
+
+    assert(map.get(a) != map.get(b));
+
+  });
+
   it ('maps work with NaN also', function() {
 
     let map = new Map();
@@ -72,11 +85,16 @@ describe ('map iteration examples', function() {
 
   });
 
-  it ('map pair array iteration', function() {
+  it ('map iteration using for-of loop', function() {
     let pairs = [];
 
     // iterate a map by key/value pairs (a pair is an array with 2 elements for the key and value)
     // arrays enumerate in the same order that map entries were added
+    // should look like this when done:
+    // [
+    //   [ 0, '0' ],
+    //   [ 1, '1' ]
+    // ]
     for (let pair of map) {
       pairs.push(pair);
     }
@@ -123,6 +141,17 @@ describe ('map iteration examples', function() {
 
   });
 
+  it ('map iteration by keys', function() {
+
+    let counter = 0;
+
+    for (let key of map.keys()) {
+      assert.equal(key, counter);
+      counter++;
+    }
+
+  });
+
   it ('map iteration by values', function() {
 
     let values = map.values();
@@ -148,6 +177,7 @@ describe ('map iteration examples', function() {
 
     // delete the entry for key=0
     assert( map.delete(0) );
+    assert( !map.has(0) );
 
     // only 1 entry left
     assert.equal(map.size, 1);

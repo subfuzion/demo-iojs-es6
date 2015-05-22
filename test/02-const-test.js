@@ -3,14 +3,16 @@ const assert = require('assert');
 
 describe ('const', function() {
 
-  it ('can\'t redeclare a const', function() {
+  it ('cannot redeclare a const', function() {
 
     const a = 5;
-    // const a = 10; // throws SyntaxError
+
+    // throws SyntaxError:
+    // const a = 10;
 
   });
 
-  it ('can\'t reassign a const', function() {
+  it ('cannot reassign a const', function() {
 
     const a = 5;
 
@@ -24,7 +26,8 @@ describe ('const', function() {
 
   it ('const requires an initial value', function() {
 
-    // const a; // throws SyntaxError
+    // throws SyntaxError:
+    // const a;
 
   });
 
