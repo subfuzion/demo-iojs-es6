@@ -5,7 +5,7 @@
 
 ---
 
-## io.js 2.0.2
+## io.js 2.1.0
 
 ---
 
@@ -22,6 +22,10 @@
 
 ```sh
 nvm install iojs
+
+Switching:
+nvm use iojs
+nvm use node
 ```
 
 ---
