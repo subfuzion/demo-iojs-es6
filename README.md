@@ -17,3 +17,6 @@ You can also run individual tests:
 
 You can view the presentation as [markdown](https://github.com/tonypujals/demo-iojs-es6/blob/master/presentation.md) or a [pdf](https://github.com/tonypujals/demo-iojs-es6/raw/master/presentation.pdf).
 
+If you would like to use promises with existing Node modules (fs, http, etc), you might want to try [@atomiq/promisify](https://github.com/atomiqio/promisify)
+
+
